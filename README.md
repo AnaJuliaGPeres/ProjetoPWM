@@ -1,7 +1,7 @@
 ## PROJETO PWM
 
 
-##### Introdução ao PWM 
+## Introdução ao PWM 
 A Modulação por Largura de Pulso, mais conhecida pela sigla PWM (do inglês, Pulse Width Modulation), é uma técnica amplamente utilizada para controlar a potência fornecida a dispositivos eletrônicos, variando a largura dos pulsos em um sinal digital. Essa modulação é essencial em diversas aplicações, como controle de motores, ajuste de brilho de LEDs, transmissão de dados, entre outras.
 
 Princípio de Funcionamento
@@ -34,14 +34,17 @@ Cabos e Conectores:
 ![alt text](image-2.png)
 
 ### Montagem:
+
 Para a motagem do circuito foi utilizado:
 
+```sh
 Arduino
 Módulo Relé
 Botão Push Button
 Protoboard
 Fios Jumper
 Conexões
+```
 
 Botão:
 
@@ -106,6 +109,7 @@ lastButtonState = buttonState;
 ```	
 
 ### Funcionamento do projeto: 
+
 Este código Arduino controla um relé usando um botão. A cada vez que o botão é pressionado, o estado do relé alterna entre ligado e desligado. 
 
 
