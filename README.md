@@ -1,7 +1,7 @@
 ## PROJETO PWM
 
 
-##### Introdução ao PWM 
+## Introdução ao PWM 
 A Modulação por Largura de Pulso, mais conhecida pela sigla PWM (do inglês, Pulse Width Modulation), é uma técnica amplamente utilizada para controlar a potência fornecida a dispositivos eletrônicos, variando a largura dos pulsos em um sinal digital. Essa modulação é essencial em diversas aplicações, como controle de motores, ajuste de brilho de LEDs, transmissão de dados, entre outras.
 
 Princípio de Funcionamento
