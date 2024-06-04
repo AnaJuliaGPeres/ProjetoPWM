@@ -1,44 +1,41 @@
 #include <Arduino.h>
 
 
-const int relay = 12; 
-const int button = 4; 
+const int motor = 9; 
+const int button = 2;
+
+int motorstate = LOW;
 int buttonState = LOW;
-int relayState = LOW;
 int lastButtonState = LOW;
 
-
-/*const int relay2 = 7; 
-unsigned long tempoAnterior =0;
-const int intervalo = 1000; */
-
-
 void setup() {
-   // Set the pin 12 as outpu
-  pinMode(relay, OUTPUT); // vai alimentar a porta 12
-  pinMode (button, INPUT_PULLUP);
- // pinMode(relay2, OUTPUT); // vai alimentar a porta 12
+  pinMode(button, INPUT_PULLUP);
 }
 
 void loop() {
- 
+
 buttonState = digitalRead(button);
- if (buttonState == LOW && lastButtonState == LOW) {
-  relayState = !relayState;
-  digitalWrite(relay, relayState);
- }
- lastButtonState = buttonState; 
+if(buttonState == HIGH && lastButtonState == LOW){
+    motorstate++;
+    if (motorstate == 0){
+        analogWrite(9, 255);
 
+    }else if (motorstate == 1){
+        analogWrite(9, 191);
 
+    }else if (motorstate == 2){
+        analogWrite(9, 127);
 
- /*unsigned long tempo = millis();
-  if(tempo - tempoAnterior >= intervalo){
-    tempoAnterior = tempo;
-    int relayState = digitalRead(relay);
-    digitalWrite(relay, !relayState); 
-    //digitalWrite(relay2, !relayState); 
+    }else if (motorstate == 3){
+        analogWrite(9, 64);
 
-  }*/
-  
+    }else if (motorstate == 4){
+        analogWrite(9, 0);
+
+    }else if (motorstate == 5){
+        analogWrite(9, 255);
+        motorstate = 0;
+    }
 }
-
+lastButtonState = buttonState;
+}
