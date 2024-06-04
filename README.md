@@ -34,14 +34,17 @@ Cabos e Conectores:
 ![alt text](image-2.png)
 
 ### Montagem:
+
 Para a motagem do circuito foi utilizado:
 
+```sh
 Arduino
 Módulo Relé
 Botão Push Button
 Protoboard
 Fios Jumper
 Conexões
+```
 
 Botão:
 
@@ -109,6 +112,7 @@ buttonState = digitalRead(button);
 ```	
 
 ### Funcionamento do projeto: 
+
 Este código Arduino controla um relé usando um botão. A cada vez que o botão é pressionado, o estado do relé alterna entre ligado e desligado. 
 
 
